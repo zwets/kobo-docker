@@ -5,7 +5,7 @@ version: '3'
 
 services:
   kobocat:
-    image: kobotoolbox/kobocat:stop-setting-deleted-at
+    image: kobotoolbox/kobocat:stop-querying-deleted-at
     hostname: kobocat
     env_file:
       - ../kobo-env/envfile.txt
@@ -44,7 +44,7 @@ services:
           - kobocat.docker.container
 
   kpi:
-    image: kobotoolbox/kpi:2.021.21
+    image: kobotoolbox/kpi:stop-querying-deleted-at
     hostname: kpi
     env_file:
       - ../kobo-env/envfile.txt
